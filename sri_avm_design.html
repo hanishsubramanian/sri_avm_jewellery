@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Sri AVM Jewellery | Gold & Silver Jewellery in Aranthangi Since 1950</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --crimson:#8B1A2B;--crimson-deep:#6B1221;--crimson-light:#A52338;
+  --gold:#C8941A;--gold-bright:#E0AA30;--gold-pale:#F5E6B8;--gold-border:#D4AF5A;
+  --cream:#FDF7EC;--cream-mid:#F7EDDA;--cream-dark:#EEE0C4;
+  --ink:#1E1208;--muted:#8C7355;--muted-light:#B09A7A;--white:#FFFFFF;
+}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:'Nunito Sans',sans-serif;font-weight:300;overflow-x:hidden}
+
+/* ── TOPBAR ── */
+.topbar{background:var(--ink);padding:7px 16px;text-align:center;font-size:11.5px;letter-spacing:.07em;color:rgba(245,230,184,.4);display:flex;justify-content:center;gap:0;flex-wrap:wrap;row-gap:2px}
+.topbar span{color:var(--gold-pale);margin:0 12px;white-space:nowrap}
+
+/* ── TICKER ── */
+.ticker{background:var(--crimson);overflow:hidden}
+.ticker-wrap{display:flex;align-items:stretch}
+.ticker-label{background:var(--crimson-deep);padding:11px 20px;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-pale);white-space:nowrap;display:flex;align-items:center;gap:8px;flex-shrink:0;border-right:1px solid rgba(212,175,90,.2)}
+.ticker-label::before{content:'◆';font-size:7px;color:var(--gold-bright)}
+.ticker-track{overflow:hidden;flex:1}
+.ticker-inner{display:flex;width:max-content;animation:run 32s linear infinite;padding:11px 0}
+.tick{white-space:nowrap;padding:0 40px;font-size:12px;color:rgba(253,247,236,.75);display:flex;align-items:center;gap:12px;letter-spacing:.05em}
+.tick b{color:var(--gold-bright);font-weight:600}
+.tick::after{content:'|';opacity:.2;margin-left:18px}
+@keyframes run{to{transform:translateX(-50%)}}
+
+/* ── NAV ── */
+.nav{background:var(--crimson);position:sticky;top:0;z-index:500;border-bottom:2.5px solid var(--gold-border)}
+.nav-inner{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;height:58px}
+.nav-logo .logo-main{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--gold-pale);letter-spacing:.04em;line-height:1}
+.nav-logo .logo-sub{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,230,184,.45);margin-top:2px;display:block}
+.nav-links{display:flex;list-style:none}
+.nav-links li a{display:flex;align-items:center;padding:0 16px;height:58px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:rgba(253,247,236,.8);text-decoration:none;transition:all .25s;border-right:1px solid rgba(212,175,90,.1)}
+.nav-links li a:hover{background:rgba(212,175,90,.12);color:var(--gold-pale)}
+.nav-cta{background:var(--gold-border);color:var(--crimson-deep);padding:9px 18px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;border:none;cursor:pointer;font-family:'Nunito Sans',sans-serif;font-weight:700;transition:all .3s;white-space:nowrap}
+.nav-cta:hover{background:var(--gold-bright)}
+/* hamburger */
+.hamburger{display:none;flex-direction:column;gap:5px;background:transparent;border:none;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--gold-pale);transition:all .3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+/* mobile menu */
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--crimson-deep);z-index:490;flex-direction:column;justify-content:center;align-items:center;gap:0}
+.mobile-menu.open{display:flex}
+.mobile-menu a{display:block;padding:18px 40px;font-size:18px;letter-spacing:.1em;text-transform:uppercase;color:rgba(253,247,236,.8);text-decoration:none;text-align:center;width:100%;border-bottom:1px solid rgba(212,175,90,.1);font-family:'Cormorant Garamond',serif;font-weight:400;transition:color .25s}
+.mobile-menu a:hover{color:var(--gold-pale)}
+.mobile-menu .mob-cta{background:var(--gold-border);color:var(--crimson-deep);margin:24px 40px 0;padding:14px 40px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;border:none;cursor:pointer;font-family:'Nunito Sans',sans-serif;font-weight:700;width:calc(100% - 80px);text-align:center}
+
+/* ── SHARED ── */
+.wrap{max-width:1280px;margin:0 auto;padding:0 48px}
+.orn{display:flex;align-items:center;gap:16px;margin:0 48px}
+.orn::before,.orn::after{content:'';flex:1;height:1px;background:linear-gradient(to right,transparent,var(--gold-border),transparent)}
+.orn-sym{color:var(--gold-border);font-size:13px;white-space:nowrap;letter-spacing:10px;opacity:.55}
+.eyebrow{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--crimson);margin-bottom:12px;display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:'';width:22px;height:1px;background:var(--crimson)}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:600;color:var(--ink);line-height:1.05;margin-bottom:8px}
+.sec-title em{font-style:italic;color:var(--gold)}
+.sec-sub{font-size:14px;color:var(--muted);line-height:1.8;max-width:520px;margin-bottom:48px}
+
+/* ── HERO ── */
+.hero{position:relative;min-height:90vh;background:linear-gradient(110deg,var(--crimson-deep) 0%,#3D0E18 48%,#1E0A10 100%);display:flex;align-items:center;overflow:hidden}
+.hero-bg-img{position:absolute;right:0;top:0;width:48%;height:100%;object-fit:cover;opacity:.18;filter:saturate(.4)}
+.hero-bg-overlay{position:absolute;right:0;top:0;width:55%;height:100%;background:linear-gradient(to right,#1E0A10 0%,transparent 40%)}
+.hero-pat{position:absolute;inset:0;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 0 L28 20 L48 24 L28 28 L24 48 L20 28 L0 24 L20 20 Z' fill='%23D4AF5A'/%3E%3C/svg%3E");background-size:48px}
+.hero-content{position:relative;z-index:2;max-width:1280px;margin:0 auto;padding:0 48px;display:grid;grid-template-columns:1.1fr 1fr;gap:72px;align-items:center;width:100%}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(212,175,90,.1);border:1px solid rgba(212,175,90,.25);padding:8px 18px;margin-bottom:32px}
+.hero-badge-dot{width:6px;height:6px;background:var(--gold-bright);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero-badge-text{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-pale)}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:72px;font-weight:600;line-height:.93;color:var(--cream);letter-spacing:-.015em;margin-bottom:10px}
+.hero-title em{font-style:italic;color:var(--gold-bright);display:block}
+.hero-sub{font-size:15px;color:rgba(253,247,236,.5);line-height:1.8;max-width:380px;margin-bottom:40px;font-weight:300}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn-gold{background:var(--gold-border);color:var(--crimson-deep);padding:14px 32px;font-size:12px;letter-spacing:.15em;text-transform:uppercase;border:none;cursor:pointer;font-family:'Nunito Sans',sans-serif;font-weight:700;transition:all .3s}
+.btn-gold:hover{background:var(--gold-bright)}
+.btn-outline-w{background:transparent;color:var(--gold-pale);padding:13px 28px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;border:1.5px solid rgba(212,175,90,.4);cursor:pointer;font-family:'Nunito Sans',sans-serif;font-weight:400;transition:all .3s;display:flex;align-items:center;gap:8px}
+.btn-outline-w:hover{border-color:var(--gold-border);color:var(--gold-bright)}
+.hero-right{display:flex;flex-direction:column;gap:14px}
+.hero-rate-card{background:rgba(253,247,236,.06);border:1px solid rgba(212,175,90,.2);backdrop-filter:blur(10px);padding:24px 28px}
+.rate-card-title{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(245,230,184,.35);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.rate-card-title::after{content:'';flex:1;height:1px;background:rgba(212,175,90,.15)}
+.rate-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(212,175,90,.08)}
+.rate-row:last-child{border-bottom:none}
+.rate-name{font-size:12.5px;color:rgba(253,247,236,.6)}
+.rate-sub{font-size:10px;color:rgba(253,247,236,.28);margin-top:2px}
+.rate-val{font-family:'Cormorant Garamond',serif;font-size:25px;color:var(--gold-bright);font-weight:500}
+.rate-change{font-size:10px;margin-top:2px;text-align:right}
+.hero-trust{display:flex;background:rgba(253,247,236,.04);border:1px solid rgba(212,175,90,.15)}
+.trust-cell{flex:1;padding:14px 8px;text-align:center;border-right:1px solid rgba(212,175,90,.1)}
+.trust-cell:last-child{border-right:none}
+.trust-val{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--gold-pale);font-weight:500;line-height:1}
+.trust-lbl{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:rgba(253,247,236,.28);margin-top:4px}
+
+/* ── CATEGORIES ── */
+.cat-sec{padding:72px 0}
+.cat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:44px}
+.cat-tile{position:relative;overflow:hidden;cursor:pointer}
+.cat-tile-img{aspect-ratio:3/4;position:relative;overflow:hidden}
+.cat-tile-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.25,.46,.45,.94)}
+.cat-tile:hover .cat-tile-img img{transform:scale(1.08)}
+.cat-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(107,18,33,.92) 0%,rgba(107,18,33,.35) 50%,transparent 75%)}
+.cat-label{position:absolute;bottom:0;left:0;right:0;padding:18px 12px 14px;text-align:center}
+.cat-name{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:var(--cream);letter-spacing:.02em;line-height:1.15}
+.cat-count{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-pale);opacity:.65;margin-top:4px}
+.cat-tile::after{content:'';position:absolute;inset:0;border:2px solid transparent;transition:border-color .35s;pointer-events:none;z-index:2}
+.cat-tile:hover::after{border-color:var(--gold-border)}
+.cat-wide-row{display:flex;gap:10px;margin-top:10px}
+.cat-wide .cat-tile-img{aspect-ratio:16/7}
+
+/* ── PRODUCTS ── */
+.feat-sec{padding:72px 0;background:var(--cream-mid)}
+.prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.prod-card{background:var(--white);border:1px solid var(--cream-dark);position:relative;cursor:pointer;transition:box-shadow .35s}
+.prod-card:hover{box-shadow:0 10px 40px rgba(139,26,43,.12)}
+.prod-img-wrap{position:relative;overflow:hidden;aspect-ratio:1;background:#f5f0e8}
+.prod-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.25,.46,.45,.94)}
+.prod-card:hover .prod-img-wrap img{transform:scale(1.07)}
+.prod-actions-overlay{position:absolute;bottom:0;left:0;right:0;height:0;background:rgba(107,18,33,.92);transition:height .38s;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:10px}
+.prod-card:hover .prod-actions-overlay{height:52px}
+.ov-btn{background:transparent;border:1px solid rgba(212,175,90,.5);color:var(--gold-pale);padding:8px 16px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;font-family:'Nunito Sans',sans-serif;transition:all .3s}
+.ov-btn:hover{background:var(--gold-border);color:var(--crimson-deep);border-color:var(--gold-border)}
+.prod-badge{position:absolute;top:12px;left:12px;padding:4px 12px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;z-index:2}
+.prod-badge.feat{background:var(--gold-border);color:var(--crimson-deep)}
+.prod-badge.new{background:var(--crimson);color:var(--gold-pale)}
+.prod-info{padding:15px}
+.prod-cat-lbl{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted-light);margin-bottom:5px}
+.prod-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--ink);line-height:1.2;margin-bottom:10px}
+.prod-footer{display:flex;justify-content:space-between;align-items:center;padding-top:10px;border-top:1px solid var(--cream-dark)}
+.prod-metal{font-size:11px;color:var(--muted);letter-spacing:.04em}
+.prod-enq{font-size:12px;color:var(--crimson);font-weight:700;letter-spacing:.04em;cursor:pointer}
+
+/* ── HERITAGE ── */
+.heritage-band{background:var(--crimson-deep);padding:72px 0;position:relative;overflow:hidden}
+.hb-pat{position:absolute;inset:0;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='1.5' fill='%23D4AF5A'/%3E%3C/svg%3E");background-size:32px}
+.hb-grid{display:grid;grid-template-columns:1fr 1px 1fr 1px 1fr;gap:48px;align-items:center;text-align:center}
+.hb-div{background:linear-gradient(to bottom,transparent,rgba(212,175,90,.4),transparent);height:100px}
+.hb-num{font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:600;color:var(--gold-bright);line-height:1;letter-spacing:-.02em}
+.hb-lbl{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,230,184,.4);margin-top:10px}
+.hb-text{font-size:14px;color:rgba(253,247,236,.55);line-height:1.85;max-width:290px;margin:0 auto}
+.hb-list{text-align:left;display:flex;flex-direction:column;gap:14px}
+.hb-item{display:flex;align-items:center;gap:12px;font-size:13.5px;color:rgba(253,247,236,.55)}
+.hb-item::before{content:'◆';color:var(--gold-border);font-size:8px;flex-shrink:0}
+
+/* ── ARRIVALS ── */
+.arrivals-sec{padding:72px 0}
+.arr-scroll{display:flex;gap:16px;overflow-x:auto;padding-bottom:8px;scrollbar-width:none;margin-top:44px;-webkit-overflow-scrolling:touch}
+.arr-scroll::-webkit-scrollbar{display:none}
+.arr-card{flex-shrink:0;width:220px;cursor:pointer}
+.arr-img{height:290px;position:relative;overflow:hidden;border:1px solid var(--cream-dark);background:#f5f0e8}
+.arr-img img{width:100%;height:100%;object-fit:cover;transition:transform .55s cubic-bezier(.25,.46,.45,.94)}
+.arr-card:hover .arr-img img{transform:scale(1.06)}
+.arr-badge{position:absolute;top:12px;left:12px;background:var(--crimson);color:var(--gold-pale);padding:4px 12px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;z-index:2}
+.arr-meta{padding:13px 0 0}
+.arr-name{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:var(--ink);margin-bottom:3px;line-height:1.2}
+.arr-cat{font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted-light)}
+.arr-enq{font-size:12px;color:var(--crimson);font-weight:700;margin-top:7px;display:flex;align-items:center;gap:5px;cursor:pointer}
+.arr-enq::after{content:'→'}
+
+/* ── WHY US ── */
+.why-sec{padding:72px 0;background:var(--ink)}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(212,175,90,.1);border:1px solid rgba(212,175,90,.1);margin-top:48px}
+.why-card{background:var(--ink);padding:44px 28px;text-align:center;transition:background .35s}
+.why-card:hover{background:var(--crimson-deep)}
+.why-icon{font-size:28px;color:var(--gold-border);margin-bottom:16px;line-height:1}
+.why-ttl{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;color:var(--cream);margin-bottom:10px}
+.why-txt{font-size:13px;color:rgba(253,247,236,.4);line-height:1.75}
+
+/* ── ENQUIRY ── */
+.enq-sec{padding:80px 0;background:var(--cream-mid)}
+.enq-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.enq-feats{display:flex;flex-direction:column;gap:20px;margin-top:32px}
+.enq-feat{display:flex;align-items:flex-start;gap:14px}
+.enq-icon{width:40px;height:40px;background:var(--crimson);display:flex;align-items:center;justify-content:center;color:var(--gold-pale);font-size:15px;flex-shrink:0}
+.enq-ttl{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:3px}
+.enq-txt{font-size:13px;color:var(--muted);line-height:1.6}
+.form{display:flex;flex-direction:column;gap:13px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.inp{background:var(--white);border:1.5px solid var(--cream-dark);color:var(--ink);padding:14px 16px;font-size:14px;font-family:'Nunito Sans',sans-serif;font-weight:300;outline:none;transition:border .3s;width:100%}
+.inp::placeholder{color:var(--muted-light)}
+.inp:focus{border-color:var(--crimson)}
+select.inp{cursor:pointer}
+.form-btns{display:flex;gap:12px}
+.btn-crimson{background:var(--crimson);color:var(--cream);border:none;padding:15px 32px;font-size:12px;letter-spacing:.13em;text-transform:uppercase;cursor:pointer;font-family:'Nunito Sans',sans-serif;font-weight:700;transition:all .3s;flex:1}
+.btn-crimson:hover{background:var(--crimson-light)}
+.btn-wa{background:#25D366;color:#fff;border:none;padding:15px 20px;font-size:12px;letter-spacing:.09em;text-transform:uppercase;cursor:pointer;font-family:'Nunito Sans',sans-serif;font-weight:700;display:flex;align-items:center;gap:8px;transition:opacity .3s;white-space:nowrap}
+.btn-wa:hover{opacity:.86}
+
+/* ── BRANCHES ── */
+.branch-sec{padding:72px 0}
+.branch-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:44px}
+.branch-card{background:var(--white);border:1px solid var(--cream-dark);padding:36px;position:relative;overflow:hidden;transition:border-color .35s}
+.branch-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--crimson);transform:scaleY(0);transform-origin:top;transition:transform .4s}
+.branch-card:hover::before{transform:scaleY(1)}
+.branch-card:hover{border-color:rgba(139,26,43,.25)}
+.br-flag{position:absolute;top:0;right:0;background:var(--crimson);color:var(--gold-pale);padding:6px 16px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+.br-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--crimson);margin-bottom:10px;line-height:1.1}
+.br-addr{font-size:13.5px;color:var(--muted);line-height:1.85;margin-bottom:6px}
+.br-hours{font-size:12px;color:var(--muted-light);margin-bottom:22px;letter-spacing:.03em}
+.br-btns{display:flex;gap:10px;flex-wrap:wrap}
+.br-btn{border:1.5px solid var(--crimson);color:var(--crimson);background:transparent;padding:10px 18px;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;cursor:pointer;font-family:'Nunito Sans',sans-serif;font-weight:600;transition:all .3s;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.br-btn:hover{background:var(--crimson);color:var(--cream)}
+
+/* ── FOOTER ── */
+footer{background:var(--crimson-deep);border-top:2.5px solid var(--gold-border)}
+.footer-top{padding:60px 48px;display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:56px;max-width:1280px;margin:0 auto}
+.f-logo{font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:700;color:var(--gold-pale);margin-bottom:5px}
+.f-sub{font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,230,184,.35);display:block;margin-bottom:16px}
+.f-desc{font-size:13px;color:rgba(253,247,236,.36);line-height:1.85}
+.f-badges{display:flex;gap:8px;margin-top:20px;flex-wrap:wrap}
+.f-badge{background:rgba(212,175,90,.1);border:1px solid rgba(212,175,90,.18);color:var(--gold-pale);padding:5px 12px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;opacity:.65}
+.f-col-ttl{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-border);margin-bottom:18px}
+.f-links{list-style:none;display:flex;flex-direction:column;gap:12px}
+.f-links a{font-size:13px;color:rgba(253,247,236,.38);text-decoration:none;transition:color .3s}
+.f-links a:hover{color:var(--gold-pale)}
+.footer-bottom{border-top:1px solid rgba(212,175,90,.1);padding:20px 48px;display:flex;justify-content:space-between;font-size:12px;color:rgba(253,247,236,.2);max-width:1280px;margin:0 auto}
+
+/* ── WA FLOAT ── */
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:999;background:#25D366;color:#fff;width:54px;height:54px;border-radius:50%;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.38);transition:transform .3s}
+.wa-float:hover{transform:scale(1.1)}
+
+/* ── REVEAL ── */
+.rev{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+.rev.in{opacity:1;transform:none}
+
+/* ════════════════════════════════════════
+   TABLET  (≤ 1024px)
+════════════════════════════════════════ */
+@media(max-width:1024px){
+  .wrap{padding:0 32px}
+  .orn{margin:0 32px}
+  .hero-content{padding:0 32px;gap:48px}
+  .hero-title{font-size:58px}
+  .cat-grid{grid-template-columns:repeat(3,1fr)}
+  .prod-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-top{padding:48px 32px;grid-template-columns:1fr 1fr;gap:40px}
+  .footer-bottom{padding:18px 32px}
+}
+
+/* ════════════════════════════════════════
+   MOBILE  (≤ 768px)
+════════════════════════════════════════ */
+@media(max-width:768px){
+  /* topbar */
+  .topbar{font-size:11px;padding:6px 12px}
+  .topbar span{margin:0 8px}
+
+  /* ticker label hidden on very small */
+  .ticker-label{padding:10px 14px;font-size:10px}
+
+  /* nav */
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .nav-cta{display:none}
+  .nav-inner{padding:0 16px}
+
+  /* hero */
+  .hero{min-height:auto;padding:80px 0 48px}
+  .hero-bg-img{width:100%;opacity:.1}
+  .hero-bg-overlay{width:100%;background:linear-gradient(to bottom,#1E0A10 0%,transparent 60%)}
+  .hero-content{grid-template-columns:1fr;gap:32px;padding:0 20px}
+  .hero-title{font-size:48px}
+  .hero-sub{font-size:14px;max-width:100%}
+  .hero-badge{margin-bottom:24px}
+  .hero-actions{gap:10px}
+  .btn-gold,.btn-outline-w{padding:13px 22px;font-size:11.5px;width:100%;justify-content:center}
+
+  /* rates card on mobile */
+  .hero-rate-card{padding:20px}
+  .rate-val{font-size:22px}
+
+  /* wrap & orn */
+  .wrap{padding:0 16px}
+  .orn{margin:0 16px}
+
+  /* section titles */
+  .sec-title{font-size:34px}
+
+  /* categories */
+  .cat-sec{padding:52px 0}
+  .cat-grid{grid-template-columns:repeat(2,1fr);gap:8px;margin-top:32px}
+  .cat-wide-row{flex-direction:column;gap:8px}
+  .cat-wide .cat-tile-img{aspect-ratio:16/8}
+  .cat-name{font-size:15px}
+
+  /* heritage */
+  .heritage-band{padding:52px 0}
+  .hb-grid{grid-template-columns:1fr;gap:28px;text-align:left}
+  .hb-div{display:none}
+  .hb-num{font-size:52px}
+  .hb-text{text-align:left;max-width:100%}
+
+  /* featured products */
+  .feat-sec{padding:52px 0}
+  .prod-grid{grid-template-columns:1fr 1fr;gap:10px;margin-top:32px}
+  .prod-name{font-size:15px}
+  .prod-info{padding:12px}
+  /* always show overlay on mobile (no hover) */
+  .prod-actions-overlay{height:44px}
+
+  /* arrivals */
+  .arrivals-sec{padding:52px 0}
+  .arr-scroll{gap:12px;margin-top:32px}
+  .arr-card{width:175px}
+  .arr-img{height:230px}
+  .arr-name{font-size:15px}
+
+  /* why us */
+  .why-sec{padding:52px 0}
+  .why-grid{grid-template-columns:1fr 1fr;gap:1px;margin-top:36px}
+  .why-card{padding:32px 20px}
+  .why-ttl{font-size:16px}
+  .why-txt{font-size:12px}
+
+  /* enquiry */
+  .enq-sec{padding:52px 0}
+  .enq-grid{grid-template-columns:1fr;gap:36px}
+  .form-row{grid-template-columns:1fr}
+  .form-btns{flex-direction:column}
+  .btn-crimson,.btn-wa{width:100%;justify-content:center;padding:15px}
+
+  /* branches */
+  .branch-sec{padding:52px 0}
+  .branch-grid{grid-template-columns:1fr;gap:12px;margin-top:32px}
+  .branch-card{padding:28px 20px}
+  .br-name{font-size:20px}
+  .br-btns{gap:8px}
+  .br-btn{padding:10px 14px;font-size:11px;flex:1;justify-content:center}
+
+  /* footer */
+  footer{border-top-width:2px}
+  .footer-top{padding:40px 16px;grid-template-columns:1fr;gap:32px}
+  .footer-bottom{padding:16px;flex-direction:column;gap:6px;text-align:center;font-size:11px}
+
+  /* wa float */
+  .wa-float{width:50px;height:50px;bottom:20px;right:20px}
+}
+
+/* ════════════════════════════════════════
+   SMALL MOBILE  (≤ 400px)
+════════════════════════════════════════ */
+@media(max-width:400px){
+  .hero-title{font-size:38px}
+  .cat-grid{grid-template-columns:1fr 1fr}
+  .prod-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .arr-card{width:160px}
+  .arr-img{height:210px}
+  .topbar{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <span>📞 +91 99761 83137</span>
+  <span>✉ info@sriavm.com</span>
+  <span>📍 Aranthangi, TN</span>
+  <span>Mon–Sat: 9 AM – 8:30 PM</span>
+</div>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-wrap">
+    <div class="ticker-label">◆ Live Rates</div>
+    <div class="ticker-track">
+      <div class="ticker-inner">
+        <div class="tick">Gold 24K (999) <b>₹7,420 / gram</b></div>
+        <div class="tick">Gold 22K (916) <b>₹6,802 / gram</b></div>
+        <div class="tick">Gold 18K (750) <b>₹5,565 / gram</b></div>
+        <div class="tick">Silver (999) <b>₹95.50 / gram</b></div>
+        <div class="tick">BIS Hallmarked · Trusted Since 1950</div>
+        <div class="tick">Gold 24K (999) <b>₹7,420 / gram</b></div>
+        <div class="tick">Gold 22K (916) <b>₹6,802 / gram</b></div>
+        <div class="tick">Gold 18K (750) <b>₹5,565 / gram</b></div>
+        <div class="tick">Silver (999) <b>₹95.50 / gram</b></div>
+        <div class="tick">BIS Hallmarked · Trusted Since 1950</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <div class="logo-main">Sri AVM Jewellery</div>
+      <div class="logo-sub">Est. 1950 · Aranthangi</div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#collections">Collections</a></li>
+      <li><a href="#featured">Gallery</a></li>
+      <li><a href="#arrivals">New Arrivals</a></li>
+      <li><a href="#top">Rates</a></li>
+      <li><a href="#branches">Branches</a></li>
+    </ul>
+    <div class="nav-right" style="display:flex;align-items:center;gap:12px">
+      <button class="nav-cta">Enquire Now</button>
+      <button class="hamburger" id="ham" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#collections" onclick="closeMenu()">Collections</a>
+  <a href="#featured" onclick="closeMenu()">Gallery</a>
+  <a href="#arrivals" onclick="closeMenu()">New Arrivals</a>
+  <a href="#rates" onclick="closeMenu()">Rates</a>
+  <a href="#branches" onclick="closeMenu()">Branches</a>
+  <a href="#enquiry" onclick="closeMenu()">Enquire</a>
+  <button class="mob-cta" onclick="closeMenu()">Enquire Now</button>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <img class="hero-bg-img" src="https://images.unsplash.com/photo-1601121141418-4ee4c1b3a3d3?w=900&q=80" alt="" aria-hidden="true" onerror="this.style.display='none'">
+  <div class="hero-bg-overlay"></div>
+  <div class="hero-pat"></div>
+  <div class="hero-content">
+    <div>
+      <div class="hero-badge"><span class="hero-badge-dot"></span><span class="hero-badge-text">Aranthangi's Most Trusted · Since 1950</span></div>
+      <h1 class="hero-title">Gold that<br><em>endures.</em><br><span style="font-size:.68em;font-style:normal;color:rgba(253,247,236,.7)">Craftsmanship that matters.</span></h1>
+      <p class="hero-sub">Three generations of jewellery-making. BIS Hallmarked gold, certified silver, and bridal sets crafted for the most precious moments of your life.</p>
+      <div class="hero-actions">
+        <button class="btn-gold">Explore Collections</button>
+        <a href="https://wa.me/919976183137" class="btn-outline-w" style="text-decoration:none">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-rate-card">
+        <div class="rate-card-title">Today's Metal Rates</div>
+        <div class="rate-row">
+          <div><div class="rate-name">Gold 24 Karat (999)</div><div class="rate-sub">per gram · BIS Hallmarked</div></div>
+          <div style="text-align:right"><div class="rate-val">₹7,420</div><div class="rate-change" style="color:#5BC870">↑ 0.4%</div></div>
+        </div>
+        <div class="rate-row">
+          <div><div class="rate-name">Gold 22 Karat (916)</div><div class="rate-sub">per gram · BIS Hallmarked</div></div>
+          <div style="text-align:right"><div class="rate-val">₹6,802</div><div class="rate-change" style="color:#5BC870">↑ 0.3%</div></div>
+        </div>
+        <div class="rate-row">
+          <div><div class="rate-name">Silver (999)</div><div class="rate-sub">per gram · Certified</div></div>
+          <div style="text-align:right"><div class="rate-val">₹95.50</div><div class="rate-change" style="color:rgba(253,247,236,.3)">– 0.1%</div></div>
+        </div>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-cell"><div class="trust-val">75+</div><div class="trust-lbl">Years</div></div>
+        <div class="trust-cell"><div class="trust-val">10K+</div><div class="trust-lbl">Families</div></div>
+        <div class="trust-cell"><div class="trust-val">BIS</div><div class="trust-lbl">Certified</div></div>
+        <div class="trust-cell"><div class="trust-val">100%</div><div class="trust-lbl">Pure</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORN -->
+<div style="padding:48px 0 0"><div class="orn"><span class="orn-sym">✦ ◆ ✦</span></div></div>
+
+<!-- CATEGORIES -->
+<section class="cat-sec rev" id="collections">
+  <div class="wrap">
+    <div class="eyebrow">Browse by Category</div>
+    <h2 class="sec-title">Shop Our <em>Collections</em></h2>
+    <div class="cat-grid">
+      <div class="cat-tile"><div class="cat-tile-img"><img src="https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=400&q=80" alt="Necklaces" onerror="this.parentElement.style.background='#e8d8b0'"><div class="cat-overlay"></div></div><div class="cat-label"><div class="cat-name">Necklaces</div><div class="cat-count">Gold & Temple</div></div></div>
+      <div class="cat-tile"><div class="cat-tile-img"><img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=400&q=80" alt="Bangles" onerror="this.parentElement.style.background='#e8d8b0'"><div class="cat-overlay"></div></div><div class="cat-label"><div class="cat-name">Bangles</div><div class="cat-count">22K & 24K Gold</div></div></div>
+      <div class="cat-tile"><div class="cat-tile-img"><img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=400&q=80" alt="Earrings" onerror="this.parentElement.style.background='#e8d8b0'"><div class="cat-overlay"></div></div><div class="cat-label"><div class="cat-name">Earrings</div><div class="cat-count">Jhumkas & Drops</div></div></div>
+      <div class="cat-tile"><div class="cat-tile-img"><img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=400&q=80" alt="Chains" onerror="this.parentElement.style.background='#e8d8b0'"><div class="cat-overlay"></div></div><div class="cat-label"><div class="cat-name">Chains</div><div class="cat-count">24K Pure Gold</div></div></div>
+      <div class="cat-tile"><div class="cat-tile-img"><img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&q=80" alt="Rings" onerror="this.parentElement.style.background='#e8d8b0'"><div class="cat-overlay"></div></div><div class="cat-label"><div class="cat-name">Rings</div><div class="cat-count">Wedding & Daily</div></div></div>
+    </div>
+    <div class="cat-wide-row">
+      <div class="cat-wide cat-tile"><div class="cat-tile-img"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=700&q=80" alt="Bridal" onerror="this.parentElement.style.background='#e8d8b0'"><div class="cat-overlay"></div></div><div class="cat-label"><div class="cat-name">Bridal Collections</div><div class="cat-count">Full Sets · Customised</div></div></div>
+      <div class="cat-wide cat-tile"><div class="cat-tile-img"><img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=700&q=80" alt="Temple" onerror="this.parentElement.style.background='#e8d8b0'"><div class="cat-overlay"></div></div><div class="cat-label"><div class="cat-name">Temple Jewellery</div><div class="cat-count">Traditional · Antique</div></div></div>
+      <div class="cat-wide cat-tile"><div class="cat-tile-img"><img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=700&q=80" alt="Silver" onerror="this.parentElement.style.background='#e8d8b0'"><div class="cat-overlay"></div></div><div class="cat-label"><div class="cat-name">Silver Jewellery</div><div class="cat-count">Pure 999 Silver</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HERITAGE -->
+<div class="heritage-band rev" id="about">
+  <div class="hb-pat"></div>
+  <div class="wrap">
+    <div class="hb-grid">
+      <div><div class="hb-num">1950</div><div class="hb-lbl">Year Established</div></div>
+      <div class="hb-div"></div>
+      <div><p class="hb-text">Sri AVM Jewellery has served families of Aranthangi and Pudukkottai district for over 75 years — from first gold bangles to full bridal sets and heirlooms passed down generations.</p></div>
+      <div class="hb-div"></div>
+      <div class="hb-list">
+        <div class="hb-item">BIS Hallmark Certified Gold</div>
+        <div class="hb-item">Low Making Charges</div>
+        <div class="hb-item">Custom & Bridal Designs</div>
+        <div class="hb-item">Exchange & Buyback</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURED -->
+<section class="feat-sec rev" id="featured">
+  <div class="wrap">
+    <div class="eyebrow">Our Showcase</div>
+    <h2 class="sec-title">Featured <em>Pieces</em></h2>
+    <p class="sec-sub">Handpicked from our collection — every piece hallmarked, every design a conversation between tradition and craft.</p>
+    <div class="prod-grid">
+      <div class="prod-card">
+        <div class="prod-img-wrap"><img src="https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?w=500&q=80" alt="Bridal Necklace"><div class="prod-actions-overlay"><button class="ov-btn">Enquire</button><button class="ov-btn">WhatsApp</button></div></div>
+        <div class="prod-badge feat">Featured</div>
+        <div class="prod-info"><div class="prod-cat-lbl">Bridal Collection</div><div class="prod-name">Bridal Kundan Necklace Set</div><div class="prod-footer"><span class="prod-metal">22K Gold · BIS</span><span class="prod-enq">Enquire →</span></div></div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-img-wrap"><img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=500&q=80" alt="Bangles"><div class="prod-actions-overlay"><button class="ov-btn">Enquire</button><button class="ov-btn">WhatsApp</button></div></div>
+        <div class="prod-badge new">New</div>
+        <div class="prod-info"><div class="prod-cat-lbl">Bangles</div><div class="prod-name">Temple Gold Kadas Pair</div><div class="prod-footer"><span class="prod-metal">22K Gold · BIS</span><span class="prod-enq">Enquire →</span></div></div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-img-wrap"><img src="https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?w=500&q=80" alt="Earrings"><div class="prod-actions-overlay"><button class="ov-btn">Enquire</button><button class="ov-btn">WhatsApp</button></div></div>
+        <div class="prod-info"><div class="prod-cat-lbl">Earrings</div><div class="prod-name">Chandbali Jhumka Drops</div><div class="prod-footer"><span class="prod-metal">22K Gold · BIS</span><span class="prod-enq">Enquire →</span></div></div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-img-wrap"><img src="https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=500&q=80" alt="Temple Pendant"><div class="prod-actions-overlay"><button class="ov-btn">Enquire</button><button class="ov-btn">WhatsApp</button></div></div>
+        <div class="prod-badge feat">Featured</div>
+        <div class="prod-info"><div class="prod-cat-lbl">Temple Jewellery</div><div class="prod-name">Lakshmi Pendant Necklace</div><div class="prod-footer"><span class="prod-metal">22K Gold · BIS</span><span class="prod-enq">Enquire →</span></div></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px">
+      <button class="btn-crimson" style="display:inline-block;flex:none;width:auto;padding:15px 52px">View All Jewellery</button>
+    </div>
+  </div>
+</section>
+
+<!-- NEW ARRIVALS -->
+<div style="padding:8px 0 0"><div class="orn"><span class="orn-sym">✦ ◆ ✦</span></div></div>
+<section class="arrivals-sec rev" id="arrivals">
+  <div class="wrap">
+    <div class="eyebrow">Just Arrived</div>
+    <h2 class="sec-title">New <em>Arrivals</em></h2>
+    <div class="arr-scroll">
+      <div class="arr-card"><div class="arr-img"><img src="https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?w=400&q=80" alt="Temple Pendant"><div class="arr-badge">New</div></div><div class="arr-meta"><div class="arr-name">Lakshmi Pendant Chain</div><div class="arr-cat">Temple Jewellery</div><div class="arr-enq">Enquire Now</div></div></div>
+      <div class="arr-card"><div class="arr-img"><img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=400&q=80" alt="Bangles"><div class="arr-badge">New</div></div><div class="arr-meta"><div class="arr-name">Antique Kadas Pair</div><div class="arr-cat">Bangles · 22K Gold</div><div class="arr-enq">Enquire Now</div></div></div>
+      <div class="arr-card"><div class="arr-img"><img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=400&q=80" alt="Earrings"><div class="arr-badge">New</div></div><div class="arr-meta"><div class="arr-name">Chandbali Earrings</div><div class="arr-cat">Earrings</div><div class="arr-enq">Enquire Now</div></div></div>
+      <div class="arr-card"><div class="arr-img"><img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&q=80" alt="Ring"></div><div class="arr-meta"><div class="arr-name">22K Wedding Band</div><div class="arr-cat">Rings</div><div class="arr-enq">Enquire Now</div></div></div>
+      <div class="arr-card"><div class="arr-img"><img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=400&q=80" alt="Chain"><div class="arr-badge">New</div></div><div class="arr-meta"><div class="arr-name">Rope Gold Chain</div><div class="arr-cat">Chains · 24K Gold</div><div class="arr-enq">Enquire Now</div></div></div>
+      <div class="arr-card"><div class="arr-img"><img src="https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?w=400&q=80" alt="Bridal"><div class="arr-badge">New</div></div><div class="arr-meta"><div class="arr-name">Bridal Necklace Set</div><div class="arr-cat">Bridal Collection</div><div class="arr-enq">Enquire Now</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-sec rev">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--gold-border)"><span style="background:var(--gold-border);width:22px;height:1px;display:inline-block;vertical-align:middle;margin-right:12px"></span>Why Sri AVM</div>
+    <h2 class="sec-title" style="color:var(--cream)">A name built on <em>trust</em></h2>
+    <div class="why-grid">
+      <div class="why-card"><div class="why-icon">◈</div><div class="why-ttl">BIS Hallmarked</div><div class="why-txt">Every gram of gold we sell carries BIS certification. Purity you can trust, guaranteed by the Bureau of Indian Standards.</div></div>
+      <div class="why-card"><div class="why-icon">✦</div><div class="why-ttl">Low Making Charges</div><div class="why-txt">More gold for your money. We keep making charges among the lowest in Pudukkottai district — transparent and fair, always.</div></div>
+      <div class="why-card"><div class="why-icon">❋</div><div class="why-ttl">Custom Bridal Sets</div><div class="why-txt">Design your dream bridal set with our master craftsmen. From sketch to delivery — entirely bespoke, exactly your vision.</div></div>
+      <div class="why-card"><div class="why-icon">⟳</div><div class="why-ttl">Exchange & Buyback</div><div class="why-txt">Gold retains value at Sri AVM. Exchange old jewellery at fair market rates, or sell it back — no questions asked.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ENQUIRY -->
+<section class="enq-sec rev" id="enquiry">
+  <div class="wrap">
+    <div class="enq-grid">
+      <div>
+        <div class="eyebrow">Get in Touch</div>
+        <h2 class="sec-title" style="font-size:38px">Find your perfect <em>piece</em></h2>
+        <p style="font-size:14px;color:var(--muted);line-height:1.85;margin-bottom:28px">Tell us what you're looking for — a specific design, a bridal set, a custom order. Our team responds the same day.</p>
+        <div class="enq-feats">
+          <div class="enq-feat"><div class="enq-icon">◈</div><div><div class="enq-ttl">Same-day response</div><div class="enq-txt">We reply to every enquiry by end of business day.</div></div></div>
+          <div class="enq-feat"><div class="enq-icon">❋</div><div><div class="enq-ttl">Bridal consultations</div><div class="enq-txt">Home visits available for bridal orders in Pudukkottai district.</div></div></div>
+          <div class="enq-feat"><div class="enq-icon">✦</div><div><div class="enq-ttl">Custom designs</div><div class="enq-txt">Bring a photo or a sketch — we'll bring it to life in gold.</div></div></div>
+        </div>
+      </div>
+      <div class="form">
+        <div class="form-row">
+          <input class="inp" type="text" placeholder="Your name">
+          <input class="inp" type="tel" placeholder="Phone number">
+        </div>
+        <input class="inp" type="email" placeholder="Email (optional)">
+        <select class="inp">
+          <option disabled selected>Select category</option>
+          <option>Bridal Collection</option>
+          <option>Gold Jewellery</option>
+          <option>Necklaces & Chains</option>
+          <option>Earrings</option>
+          <option>Bangles</option>
+          <option>Rings</option>
+          <option>Silver Jewellery</option>
+          <option>Temple Jewellery</option>
+          <option>Custom Design</option>
+        </select>
+        <textarea class="inp" rows="4" placeholder="Describe what you're looking for..."></textarea>
+        <div class="form-btns">
+          <button class="btn-crimson">Send Enquiry</button>
+          <a href="https://wa.me/919976183137?text=Hello%20Sri%20AVM%20Jewellery%2C%20I%20am%20interested%20in%20your%20jewellery.%20Please%20share%20more%20details." class="btn-wa" style="text-decoration:none">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANCHES -->
+<section class="branch-sec rev" id="branches">
+  <div class="wrap">
+    <div class="eyebrow">Find Us</div>
+    <h2 class="sec-title">Our <em>Showrooms</em></h2>
+    <div class="branch-grid">
+      <div class="branch-card">
+        <div class="br-flag">Main Store</div>
+        <div class="br-name">Main Showroom</div>
+        <div class="br-addr">No. 45, Raja Street, Aranthangi<br>Pudukkottai District, Tamil Nadu – 614 616</div>
+        <div class="br-hours">Mon – Sat: 9:00 AM – 8:30 PM &nbsp;|&nbsp; Sunday: 10:00 AM – 6:00 PM</div>
+        <div class="br-btns">
+          <a href="tel:+919976183137" class="br-btn">📞 Call Now</a>
+          <a href="https://wa.me/919976183137" class="br-btn">💬 WhatsApp</a>
+          <a href="https://maps.google.com/?q=Aranthangi" target="_blank" class="br-btn">📍 Directions</a>
+        </div>
+      </div>
+      <div class="branch-card">
+        <div class="br-flag">Branch</div>
+        <div class="br-name">Branch Showroom</div>
+        <div class="br-addr">No. 12, Market Road, Aranthangi<br>Pudukkottai District, Tamil Nadu – 614 616</div>
+        <div class="br-hours">Mon – Sat: 9:30 AM – 8:00 PM &nbsp;|&nbsp; Sunday: Closed</div>
+        <div class="br-btns">
+          <a href="tel:+919976183137" class="br-btn">📞 Call Now</a>
+          <a href="https://wa.me/919976183137" class="br-btn">💬 WhatsApp</a>
+          <a href="https://maps.google.com/?q=Aranthangi" target="_blank" class="br-btn">📍 Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="f-logo">Sri AVM Jewellery</div>
+      <span class="f-sub">Est. 1950 · Aranthangi, Tamil Nadu</span>
+      <p class="f-desc">Trusted by generations of families across Pudukkottai district for premium gold jewellery, bridal collections, and custom-made designs. Family-owned since 1950.</p>
+      <div class="f-badges"><div class="f-badge">BIS Hallmark</div><div class="f-badge">GST Registered</div><div class="f-badge">Est. 1950</div></div>
+    </div>
+    <div>
+      <div class="f-col-ttl">Collections</div>
+      <ul class="f-links">
+        <li><a href="#">Bridal Jewellery</a></li>
+        <li><a href="#">Temple Jewellery</a></li>
+        <li><a href="#">Gold Necklaces</a></li>
+        <li><a href="#">Chains</a></li>
+        <li><a href="#">Bangles</a></li>
+        <li><a href="#">Silver Jewellery</a></li>
+        <li><a href="#">Custom Designs</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-ttl">Information</div>
+      <ul class="f-links">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Today's Gold Rate</a></li>
+        <li><a href="#">BIS Hallmarking</a></li>
+        <li><a href="#">Exchange Policy</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-ttl">Contact</div>
+      <ul class="f-links">
+        <li><a href="tel:+919976183137">+91 99761 83137</a></li>
+        <li><a href="mailto:info@sriavm.com">info@sriavm.com</a></li>
+        <li><a href="https://wa.me/919976183137">WhatsApp →</a></li>
+      </ul>
+      <div style="margin-top:22px">
+        <div class="f-col-ttl">Hours</div>
+        <div style="font-size:12.5px;color:rgba(253,247,236,.32);line-height:1.9">Mon – Sat: 9:00 AM – 8:30 PM<br>Sunday: 10:00 AM – 6:00 PM</div>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1280px;margin:0 auto">
+    <div class="footer-bottom">
+      <span>© 2025 Sri AVM Jewellery. All rights reserved.</span>
+      <span>Aranthangi · Pudukkottai · Tamil Nadu · India</span>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING WA -->
+<a href="https://wa.me/919976183137" class="wa-float" title="Chat on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<script>
+// Scroll reveal
+const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('in') }), {threshold:.07});
+document.querySelectorAll('.rev').forEach(el => io.observe(el));
+
+// Hamburger menu
+const ham = document.getElementById('ham');
+const menu = document.getElementById('mobileMenu');
+ham.addEventListener('click', () => {
+  ham.classList.toggle('open');
+  menu.classList.toggle('open');
+  document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+});
+function closeMenu(){
+  ham.classList.remove('open');
+  menu.classList.remove('open');
+  document.body.style.overflow = '';
+}
+</script>
+</body>
+</html>
